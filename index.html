@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equation Solver</title>
+    <link
+      rel="stylesheet"
+      href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css" />
+    <style>
+        #blocklyDiv {
+            height: 480px;
+            width: 100%;
+        }
+        #runButton {
+            width: 120px;
+            height: 60px;
+            color: #fff;
+            font-size: 3em;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 60px;
+        }
+        #outputContainer {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            font-family: Arial, sans-serif;
+            color: #333;
+            font-size: 16px;
+            white-space: pre-wrap; /* Ensures line breaks are respected */
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Equation Solver</h1>
+    <div id="pageContainer">
+        <div id="outputPane">
+          <pre id="generatedCode"><code></code></pre>
+          <div id="output"></div>
+        </div>
+        <div id="blocklyDiv"></div>
+    <button id="runButton" class = "button mdl-color--teal-500">Run</button> 
+    <div id="outputContainer" style="margin-top: 10px;"></div>
+    <xml id="toolbox" style="display: none">
+        <category name="Expressions and Equations" colour="#E91E63">
+            <block type="variable"></block>
+            <block type="constant"></block>
+            <block type="equation"></block>
+        </category>
+        <category name="Properties of Equality" colour="#FFEB3B">
+            <block type="add"></block>
+            <block type="subtract"></block>
+            <block type="divide"></block>
+            <block type="multiply"></block>
+        </category>
+        <category name="Solvers" colour="#03A9F4">
+            <block type="equation_solver"></block>
+        </category>
+    </xml>
+    <script src="https://unpkg.com/blockly/blockly_compressed.js"></script>
+    <script src="https://unpkg.com/blockly/blocks_compressed.js"></script>
+    <script src="https://unpkg.com/blockly/javascript_compressed.js"></script>
+    <script src="https://unpkg.com/blockly/msg/en.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>
